@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cnaqjab1f1d6q"]
+
+[ext_resource type="Script" uid="uid://b5hfjdskyco44" path="res://poco.gd" id="1_sfqmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
+size = Vector2(700, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp616"]
+size = Vector2(100, 100)
+
+[node name="Poco" type="Area2D" unique_id=1654997157]
+script = ExtResource("1_sfqmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=104441072]
+position = Vector2(-150, 0)
+shape = SubResource("RectangleShape2D_7byxd")
+
+[node name="PontoPonte" type="Marker2D" parent="." unique_id=965637029]
+position = Vector2(0, -36)
+
+[node name="Detector" type="Area2D" parent="." unique_id=467327521]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=1587128343]
+position = Vector2(-400, -100)
+shape = SubResource("RectangleShape2D_mp616")
+
+[node name="VisualDetector" type="Polygon2D" parent="Detector" unique_id=1682156066]
+color = Color(0.7603464, 0.30331385, 1, 1)
+polygon = PackedVector2Array(-349, -49, -349, -150, -450, -150, -450, -49)

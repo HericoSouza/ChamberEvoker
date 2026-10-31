@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://biycl4ejfwwyi"]
+
+[ext_resource type="Script" uid="uid://dqqvjp1n71xl8" path="res://poco_espinhos.gd" id="1_s3luj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
+size = Vector2(700, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp616"]
+size = Vector2(100, 100)
+
+[node name="Poco_Espinhos" type="Area2D" unique_id=1654997157]
+script = ExtResource("1_s3luj")
+
+[node name="PontoCorda" type="Marker2D" parent="." unique_id=965637029]
+position = Vector2(0, -180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=104441072]
+position = Vector2(-150, 0)
+shape = SubResource("RectangleShape2D_7byxd")
+
+[node name="CordaVisual" type="Line2D" parent="." unique_id=1414398068]
+
+[node name="VisualSuporte" type="ColorRect" parent="." unique_id=285393711]
+offset_left = -35.0
+offset_top = -186.0
+offset_right = 35.0
+offset_bottom = -174.0
+color = Color(0, 1, 1, 1)
+
+[node name="VisualEspinhos" type="ColorRect" parent="." unique_id=1394171659]
+offset_left = -180.0
+offset_top = 70.0
+offset_right = 180.0
+offset_bottom = 88.0
+color = Color(0.44755095, 0.44755095, 0.44755095, 1)
+
+[node name="Detector" type="Area2D" parent="." unique_id=467327521]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=1587128343]
+position = Vector2(-400, -100)
+shape = SubResource("RectangleShape2D_mp616")
+
+[node name="VisualDetector" type="Polygon2D" parent="Detector" unique_id=1682156066]
+color = Color(0.7603464, 0.30331385, 1, 1)
+polygon = PackedVector2Array(-349, -49, -349, -150, -450, -150, -450, -49)

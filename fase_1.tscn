@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dq4mpfhbdod67"]
+
+[ext_resource type="Script" uid="uid://xxd2dit63gn8" path="res://mago.gd" id="1_5s2kv"]
+[ext_resource type="Texture2D" uid="uid://tr22rajiap7l" path="res://Captura de tela 2026-10-29 141339.png" id="2_urf38"]
+[ext_resource type="PackedScene" uid="uid://biycl4ejfwwyi" path="res://poco_espinhos.tscn" id="4_ny45v"]
+[ext_resource type="PackedScene" uid="uid://cnaqjab1f1d6q" path="res://poco.tscn" id="4_tggv0"]
+[ext_resource type="PackedScene" uid="uid://bpse41lt7irfx" path="res://armadilha_esqueletos.tscn" id="5_tggv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
+size = Vector2(30, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp616"]
+size = Vector2(1900, 40)
+
+[node name="Fase1" type="Node2D" unique_id=22809739]
+
+[node name="Mago" type="CharacterBody2D" parent="." unique_id=2011943716]
+position = Vector2(200, 410)
+script = ExtResource("1_5s2kv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mago" unique_id=2139748411]
+position = Vector2(-19.812498, 0)
+scale = Vector2(0.11684102, 0.15)
+texture = ExtResource("2_urf38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mago" unique_id=1322526250]
+shape = SubResource("RectangleShape2D_7byxd")
+
+[node name="Camera2D" type="Camera2D" parent="Mago/CollisionShape2D" unique_id=47519482]
+
+[node name="Chao" type="StaticBody2D" parent="." unique_id=1440101409]
+position = Vector2(387, 516)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=1881903933]
+position = Vector2(-115.875, 0)
+shape = SubResource("RectangleShape2D_mp616")
+
+[node name="Polygon2D" type="Polygon2D" parent="Chao" unique_id=67909296]
+polygon = PackedVector2Array(-500, -20, 500, -20, 500, 20, -500, 20)
+
+[node name="Chao2" type="StaticBody2D" parent="." unique_id=974590586]
+position = Vector2(387, 516)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao2" unique_id=1493003814]
+position = Vector2(1256.9375, 0)
+shape = SubResource("RectangleShape2D_mp616")
+
+[node name="Polygon2D" type="Polygon2D" parent="Chao2" unique_id=727499781]
+position = Vector2(1200, 0)
+polygon = PackedVector2Array(-500, -20, 500, -20, 500, 20, -500, 20)
+
+[node name="Poco" parent="." unique_id=1654997157 instance=ExtResource("4_tggv0")]
+position = Vector2(1041, 548)
+
+[node name="Poco_Espinhos" parent="." unique_id=683809761 instance=ExtResource("4_ny45v")]
+position = Vector2(2284, 495)
+
+[node name="Chao3" type="StaticBody2D" parent="." unique_id=1729061585]
+position = Vector2(1790, 516)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao3" unique_id=1956827044]
+position = Vector2(1661.5, 0)
+shape = SubResource("RectangleShape2D_mp616")
+
+[node name="Polygon2D" type="Polygon2D" parent="Chao3" unique_id=1571908967]
+position = Vector2(1660.5, 0)
+scale = Vector2(1.9210002, 1)
+polygon = PackedVector2Array(-500, -20, 128.10794, -20, 500, -20, 500, 20, -500, 20)
+
+[node name="ArmadilhaEsqueletos" parent="Chao3" unique_id=249315514 instance=ExtResource("5_tggv0")]
+position = Vector2(1609, -20)
