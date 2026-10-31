@@ -70,4 +70,15 @@ O projeto utiliza cenas independentes e scripts próprios para organizar as mec�
 ## Como executar
 
 1. Instale a Godot Engine 4.7 ou uma versão compatível.
-2. Clone este repositório ou faça
+2. Clone este repositório ou faça download do zip
+3. Execute o projeto com o F6
+
+## Participação em Game Jam
+
+Este projeto está sendo desenvolvido para a **[Hallow Jam 3: Invocação](https://itch.io/jam/hallowjam3)**, uma game jam organizada pelo Game Lab.
+
+A proposta do NecroEvaders explora o tema da invocação por meio de mecânicas centrais de gameplay, nas quais o jogador precisa conjurar objetos mágicos para superar obstáculos, escapar de criaturas e enfrentar desafios.
+
+**Período da Jam:** 23/10/2026 a 02/11/2026.
+
+**Tema:** Invocação.
