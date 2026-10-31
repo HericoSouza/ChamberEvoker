@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b8mjmpx3yo0ti"]
+
+[ext_resource type="Script" uid="uid://djf8tq317tylk" path="res://Player/player_ui.gd" id="1_qbo8c"]
+
+[node name="PlayerUi" type="Control" unique_id=1923991655]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qbo8c")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=46303751]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.85
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.14483374, 0.33165124, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1018422723]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="BridgeButton" type="Button" parent="ColorRect/HBoxContainer" unique_id=1333473448]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+text = "PONTE"
+
+[node name="CageButton" type="Button" parent="ColorRect/HBoxContainer" unique_id=1056256436]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+text = "gaiola"
+
+[node name="RopeButton" type="Button" parent="ColorRect/HBoxContainer" unique_id=1300869251]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+text = "CORDA"
+
+[node name="ManaBar" type="ProgressBar" parent="." unique_id=403347780]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 27.0
+grow_horizontal = 2
+value = 100.0
+
+[connection signal="pressed" from="ColorRect/HBoxContainer/BridgeButton" to="." method="_on_bridge_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/CageButton" to="." method="_on_cage_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/RopeButton" to="." method="_on_rope_button_pressed"]

@@ -1,7 +1,7 @@
 
 extends Area2D
 
-const HORDA_CENA = preload("res://horda_esqueletos.tscn")
+var HORDA_CENA = Globals.skele_horde
 
 @onready var ponto_spawn: Marker2D = $SpawnPoint
 

@@ -1,32 +1,17 @@
 [gd_scene format=3 uid="uid://dq4mpfhbdod67"]
 
-[ext_resource type="Script" uid="uid://xxd2dit63gn8" path="res://mago.gd" id="1_5s2kv"]
-[ext_resource type="Texture2D" uid="uid://tr22rajiap7l" path="res://Captura de tela 2026-10-29 141339.png" id="2_urf38"]
+[ext_resource type="PackedScene" uid="uid://nxeqw4ay2vqx" path="res://Player/Player.tscn" id="1_ny45v"]
 [ext_resource type="PackedScene" uid="uid://biycl4ejfwwyi" path="res://poco_espinhos.tscn" id="4_ny45v"]
 [ext_resource type="PackedScene" uid="uid://cnaqjab1f1d6q" path="res://poco.tscn" id="4_tggv0"]
 [ext_resource type="PackedScene" uid="uid://bpse41lt7irfx" path="res://armadilha_esqueletos.tscn" id="5_tggv0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
-size = Vector2(30, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mp616"]
 size = Vector2(1900, 40)
 
 [node name="Fase1" type="Node2D" unique_id=22809739]
 
-[node name="Mago" type="CharacterBody2D" parent="." unique_id=2011943716]
+[node name="Mago" parent="." unique_id=718686967 instance=ExtResource("1_ny45v")]
 position = Vector2(200, 410)
-script = ExtResource("1_5s2kv")
-
-[node name="Sprite2D" type="Sprite2D" parent="Mago" unique_id=2139748411]
-position = Vector2(-19.812498, 0)
-scale = Vector2(0.11684102, 0.15)
-texture = ExtResource("2_urf38")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mago" unique_id=1322526250]
-shape = SubResource("RectangleShape2D_7byxd")
-
-[node name="Camera2D" type="Camera2D" parent="Mago/CollisionShape2D" unique_id=47519482]
 
 [node name="Chao" type="StaticBody2D" parent="." unique_id=1440101409]
 position = Vector2(387, 516)

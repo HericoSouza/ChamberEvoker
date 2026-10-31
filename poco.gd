@@ -13,7 +13,7 @@ const TEMPO_RECARGA = 1.0
 var estado_atual = Estado.ABERTO
 var tentativa_consumida = false
 
-var ponte_cena = preload("res://ponte.tscn")
+var ponte_cena = Globals.bridge
 var ponte_instanciada: StaticBody2D = null
 
 @onready var detector: Area2D = $Detector

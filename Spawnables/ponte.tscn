@@ -7,6 +7,7 @@ size = Vector2(400, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034619180]
 shape = SubResource("RectangleShape2D_7byxd")
+one_way_collision = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2120817987]
 offset_left = -200.0

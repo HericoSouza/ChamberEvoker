@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bb3ut8ffi8h6h"]
 
 [ext_resource type="Script" uid="uid://cfrscdm3mbnuw" path="res://horda_esqueletos.gd" id="1_nfd6l"]
-[ext_resource type="PackedScene" uid="uid://c8ptyh8bscwiw" path="res://esqueleto.tscn" id="2_n0s0n"]
+[ext_resource type="PackedScene" uid="uid://c8ptyh8bscwiw" path="res://Esqueleto/esqueleto.tscn" id="2_n0s0n"]
 
 [node name="HordaEsqueletos" type="Node2D" unique_id=1316900001]
 script = ExtResource("1_nfd6l")

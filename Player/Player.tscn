@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://nxeqw4ay2vqx"]
+
+[ext_resource type="Script" uid="uid://xxd2dit63gn8" path="res://Player/mago.gd" id="1_q3lat"]
+[ext_resource type="PackedScene" uid="uid://b8mjmpx3yo0ti" path="res://Player/PlayerUI.tscn" id="3_tok1r"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sch1g"]
+size = Vector2(30, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
+size = Vector2(30, 40)
+
+[node name="Mago" type="CharacterBody2D" unique_id=718686967]
+script = ExtResource("1_q3lat")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1112705603]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1893695061]
+
+[node name="PlayerUi" parent="Camera2D/CanvasLayer" unique_id=710461485 node_paths=PackedStringArray("player") instance=ExtResource("3_tok1r")]
+player = NodePath("../../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=591884960]
+texture = SubResource("PlaceholderTexture2D_sch1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=305724556]
+shape = SubResource("RectangleShape2D_7byxd")

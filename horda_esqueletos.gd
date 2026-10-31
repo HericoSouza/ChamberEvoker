@@ -4,7 +4,7 @@ extends Node2D
 const VELOCIDADE_HORDA = 100.0
 const DURACAO_EMERSAO = 0.45
 const ALTURA_EMERSAO = 55.0
-const PAREDE_CENA = preload("res://parede_horda.tscn")
+var parede_cena = Globals.wall
 
 var mago: CharacterBody2D = null
 var armadilha: Area2D = null
@@ -76,7 +76,7 @@ func invocar_parede() -> void:
 
 	parede_invocada = true
 
-	parede_instanciada = PAREDE_CENA.instantiate()
+	parede_instanciada = parede_cena.instantiate()
 	parede_instanciada.position = Vector2(-42, 0)
 	add_child(parede_instanciada)
 
