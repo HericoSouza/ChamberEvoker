@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bpse41lt7irfx"]
+
+[ext_resource type="Script" uid="uid://dm26yfycmw7ny" path="res://Unused/armadilha_esqueletos.gd" id="1_sch1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
+size = Vector2(200, 180)
+
+[node name="ArmadilhaEsqueletos" type="Area2D" unique_id=249315514]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_sch1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=423904098]
+position = Vector2(0, -70)
+shape = SubResource("RectangleShape2D_7byxd")
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=127144640]
+position = Vector2(420, 0)
+
+[node name="VisualZona" type="ColorRect" parent="." unique_id=1301898293]
+offset_left = -100.0
+offset_top = -160.0
+offset_right = 100.0
+offset_bottom = 20.0
+color = Color(0.7333659, 0.65696883, 0.41041455, 0.61960787)
+
+[node name="VisualArmadilha" type="ColorRect" parent="." unique_id=895109728]
+offset_left = -30.0
+offset_top = -10.0
+offset_right = 30.0
+color = Color(0.74509805, 0.078431375, 0.9764706, 0.49019608)

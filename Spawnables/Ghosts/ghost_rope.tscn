@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://omxnfqwbi5v0"]
+
+[ext_resource type="Script" uid="uid://cx7yybij0sbbc" path="res://Spawnables/Ghosts/ghost.gd" id="1_dbl8s"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_domlt"]
+size = Vector2(16, 96)
+
+[node name="GhostRope" type="Sprite2D" unique_id=420853277]
+modulate = Color(1, 1, 1, 0.49803922)
+texture = SubResource("PlaceholderTexture2D_domlt")
+script = ExtResource("1_dbl8s")
+snap = Vector2(8, 16)
