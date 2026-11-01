@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byc4lnao8rl41"]
 
-[ext_resource type="Script" uid="uid://bd414xpsx568s" path="res://parede_horda.gd" id="1_rwkx2"]
+[ext_resource type="Script" uid="uid://bd414xpsx568s" path="res://Unused/parede_horda.gd" id="1_rwkx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
 size = Vector2(48, 70)

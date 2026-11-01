@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://biycl4ejfwwyi"]
 
-[ext_resource type="Script" uid="uid://dqqvjp1n71xl8" path="res://poco_espinhos.gd" id="1_s3luj"]
+[ext_resource type="Script" uid="uid://dqqvjp1n71xl8" path="res://Unused/poco_espinhos.gd" id="1_s3luj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
 size = Vector2(700, 300)

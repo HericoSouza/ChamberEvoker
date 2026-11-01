@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ba02i7fua6njp"]
+
+[ext_resource type="Script" uid="uid://cx7yybij0sbbc" path="res://Spawnables/Ghosts/ghost.gd" id="1_rnssr"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_domlt"]
+size = Vector2(16, 64)
+
+[node name="GhostWall" type="Sprite2D" unique_id=1204813897]
+self_modulate = Color(1, 1, 1, 0.49803922)
+texture = SubResource("PlaceholderTexture2D_domlt")
+script = ExtResource("1_rnssr")
+snap = Vector2(8, 8)

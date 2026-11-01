@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cqji55nx1h8mx"]
+
+[ext_resource type="Script" uid="uid://5g821cxdeisx" path="res://LevelObjects/kill_area.gd" id="1_mpxrw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1gas"]
+size = Vector2(200, 40)
+
+[node name="KillArea" type="Area2D" unique_id=576886536]
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("1_mpxrw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=463719103]
+shape = SubResource("RectangleShape2D_d1gas")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

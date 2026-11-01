@@ -6,21 +6,29 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sch1g"]
 size = Vector2(30, 40)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
-size = Vector2(30, 40)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n0gnj"]
+radius = 15.0
+height = 40.0
 
 [node name="Mago" type="CharacterBody2D" unique_id=718686967]
+z_index = 1
+collision_layer = 2
+collision_mask = 13
 script = ExtResource("1_q3lat")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1112705603]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1893695061]
-
-[node name="PlayerUi" parent="Camera2D/CanvasLayer" unique_id=710461485 node_paths=PackedStringArray("player") instance=ExtResource("3_tok1r")]
-player = NodePath("../../..")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=591884960]
 texture = SubResource("PlaceholderTexture2D_sch1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=305724556]
-shape = SubResource("RectangleShape2D_7byxd")
+shape = SubResource("CapsuleShape2D_n0gnj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1893695061]
+layer = 2
+
+[node name="PlayerUi" parent="CanvasLayer" unique_id=710461485 node_paths=PackedStringArray("player") instance=ExtResource("3_tok1r")]
+visible = false
+player = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="GhostLayer" type="CanvasLayer" parent="." unique_id=1750395470]
+follow_viewport_enabled = true

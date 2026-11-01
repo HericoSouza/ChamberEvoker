@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://osuml1jke0aw"]
+
+[ext_resource type="Script" uid="uid://4bvhidjardke" path="res://LevelObjects/objective.gd" id="1_h78mk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p5y5u"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1gas"]
+size = Vector2(64, 64)
+
+[node name="Objective" type="Area2D" unique_id=370558288 groups=["objective"]]
+z_index = -1
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_h78mk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=267224907]
+texture = SubResource("PlaceholderTexture2D_p5y5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410661471]
+shape = SubResource("RectangleShape2D_d1gas")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

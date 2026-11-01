@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_qbo8c")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=46303751]
@@ -31,23 +32,54 @@ grow_vertical = 2
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="BridgeButton" type="Button" parent="ColorRect/HBoxContainer" unique_id=1333473448]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer" unique_id=1359270446]
+layout_mode = 2
+alignment = 1
+
+[node name="BridgeButton" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer" unique_id=1333473448]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
+focus_mode = 0
 text = "PONTE"
 
-[node name="CageButton" type="Button" parent="ColorRect/HBoxContainer" unique_id=1056256436]
-custom_minimum_size = Vector2(64, 64)
+[node name="BridgeLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer" unique_id=476707584]
 layout_mode = 2
-size_flags_vertical = 4
-text = "gaiola"
+text = "20"
+horizontal_alignment = 1
 
-[node name="RopeButton" type="Button" parent="ColorRect/HBoxContainer" unique_id=1300869251]
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/HBoxContainer" unique_id=603107784]
+layout_mode = 2
+alignment = 1
+
+[node name="WallButton" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer2" unique_id=1056256436]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
+focus_mode = 0
+text = "PAREDE"
+autowrap_mode = 3
+
+[node name="WallLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer2" unique_id=2141877913]
+layout_mode = 2
+text = "30"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ColorRect/HBoxContainer" unique_id=2115519701]
+layout_mode = 2
+alignment = 1
+
+[node name="RopeButton" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer3" unique_id=1300869251]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
 text = "CORDA"
+
+[node name="RopeLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer3" unique_id=714695989]
+layout_mode = 2
+text = "40"
+horizontal_alignment = 1
 
 [node name="ManaBar" type="ProgressBar" parent="." unique_id=403347780]
 layout_mode = 1
@@ -57,6 +89,6 @@ offset_bottom = 27.0
 grow_horizontal = 2
 value = 100.0
 
-[connection signal="pressed" from="ColorRect/HBoxContainer/BridgeButton" to="." method="_on_bridge_button_pressed"]
-[connection signal="pressed" from="ColorRect/HBoxContainer/CageButton" to="." method="_on_cage_button_pressed"]
-[connection signal="pressed" from="ColorRect/HBoxContainer/RopeButton" to="." method="_on_rope_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/BridgeButton" to="." method="_on_bridge_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer2/WallButton" to="." method="_on_wall_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer3/RopeButton" to="." method="_on_rope_button_pressed"]
