@@ -16,10 +16,17 @@ static var ghost_wall: PackedScene = preload("res://Spawnables/Ghosts/ghost_wall
 static var main_menu_path: String = "res://Menus/main_menu.tscn"
 static var win_screen_path: String = "res://Menus/win_screen.tscn"
 static var current_level: int = -1
-static var levels: Array[String] = ["res://Levels/TutorialLevels/tutorial_objective.tscn",
-"res://Levels/TutorialLevels/tutorial_bridge.tscn",
-"res://Levels/TutorialLevels/tutorial_rope.tscn",
-"res://Levels/TutorialLevels/tutorial_button.tscn"]
+static var levels: Array[String] = [
+	"res://Levels/TutorialLevels/tutorial_objective.tscn",
+	"res://Levels/TutorialLevels/tutorial_bridge.tscn",
+	"res://Levels/TutorialLevels/tutorial_rope.tscn",
+	"res://Levels/TutorialLevels/tutorial_button.tscn",
+
+	"res://Levels/Levels1-4/AliveOrAlive.tscn",
+	"res://Levels/Levels1-4/Big_Pit.tscn",
+	"res://Levels/Levels1-4/FoeOrBuddy.tscn",
+	"res://Levels/Levels1-4/SideToSide.tscn"
+]
 
 static func next_level() -> void:
 	if (current_level < levels.size()):
