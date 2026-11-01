@@ -25,7 +25,12 @@ static var levels: Array[String] = [
 	"res://Levels/Levels1-4/AliveOrAlive.tscn",
 	"res://Levels/Levels1-4/Big_Pit.tscn",
 	"res://Levels/Levels1-4/FoeOrBuddy.tscn",
-	"res://Levels/Levels1-4/SideToSide.tscn"
+	"res://Levels/Levels1-4/SideToSide.tscn",
+
+	"res://Levels/Levels5-8/Vines.tscn",
+	"res://Levels/Levels5-8/TwoKeys.tscn",
+	"res://Levels/Levels5-8/Tower.tscn",
+	"res://Levels/Levels5-8/LastRitual.tscn"
 ]
 
 static func next_level() -> void:
