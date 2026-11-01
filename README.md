@@ -1,84 +1,155 @@
 # NecroEvaders
 
 <p align="center">
-  <strong>Um jogo 2D sobre magia, reflexos e sobrevivência.</strong>
+  <strong>Um mago. Uma câmara. Uma sequência de salas.</strong>
 </p>
 
-NecroEvaders é um projeto de jogo 2D desenvolvido na **Godot Engine**, com elementos de plataforma, runner e desafios baseados em reflexos e precisão.
+NecroEvaders é um jogo 2D de puzzles e plataforma desenvolvido com **Godot Engine 4.7**, no qual o jogador controla um mago que precisa explorar uma misteriosa câmara, solucionar desafios e encontrar o caminho para avançar.
+
+Para superar os obstáculos, o jogador utiliza diferentes invocações mágicas, criando objetos que modificam o ambiente e permitem alcançar lugares antes inacessíveis.
+
+Cada desafio exige observação, planejamento e gerenciamento dos recursos disponíveis.
+
+---
 
 ## Sobre o jogo
 
-Em um universo onde os magos invocadores são divididos entre aqueles que utilizam magia para criar objetos e aqueles que invocam criaturas, existe uma proibição: magos do bem não podem invocar seres vivos.
+Preso em uma enorme câmara repleta de obstáculos e mecanismos, o protagonista precisa utilizar suas habilidades de invocação para encontrar uma saída.
 
-Nosso protagonista pertence ao grupo dos invocadores de objetos e parte em uma jornada para capturar magos necromantes, responsáveis por invocar criaturas e espalhar o caos.
+Pontes, cordas e paredes são algumas das ferramentas disponíveis. Cada objeto possui uma finalidade específica, e sua utilização exige atenção ao posicionamento e aos recursos disponíveis.
 
-Para avançar, será necessário utilizar objetos mágicos, superar obstáculos e sobreviver às armadilhas preparadas pelos inimigos.
+O ambiente é formado por diferentes salas e desafios, nos quais o jogador precisa descobrir como utilizar suas habilidades para avançar.
 
-## Mecânicas
+**O objetivo é resolver os puzzles, administrar a mana e alcançar a saída de cada câmara.**
+
+## Mecânicas principais
 
 ### Invocação de objetos
 
-O protagonista não pode invocar criaturas. Suas habilidades são voltadas à criação de objetos que permitem superar os obstáculos.
+O jogador pode selecionar e posicionar diferentes objetos mágicos para interagir com o cenário.
 
-- **Pontes:** utilizadas para atravessar poços sem espinhos.
-- **Cordas:** permitem suspender o personagem e atravessar poços com espinhos.
-- **Paredes:** utilizadas para bloquear hordas de criaturas.
+| Objeto | Funcionalidade |
+|---|---|
+| Ponte | Conecta plataformas e permite atravessar vãos. |
+| Corda | Cria pontos de sustentação para alcançar diferentes alturas. |
+| Parede | Bloqueia caminhos e permite modificar a passagem pelos obstáculos. |
 
-### Movimentação
+### Gerenciamento de mana
 
-- Corrida automática para a direita.
-- Salto controlado pelo jogador.
-- Travessias que exigem combinações de ações.
-- Obstáculos que exigem precisão no momento da invocação.
+Cada invocação possui um custo de mana. O jogador precisa administrar seus recursos para conseguir concluir os desafios.
 
-### Inimigos
+A quantidade de mana disponível e o custo dos objetos podem variar de acordo com a fase.
 
-Os necromantes utilizam criaturas invocadas para impedir o avanço do protagonista. Entre os desafios previstos estão hordas de esqueletos e confrontos contra chefes.
+### Puzzles e exploração
+
+- Obstáculos que exigem diferentes combinações de invocações.
+- Botões e mecanismos que desbloqueiam objetivos.
+- Plataformas e caminhos que exigem planejamento.
+- Desafios que exploram o posicionamento dos objetos no cenário.
+
+### Progressão
+
+O jogo possui fases de tutorial para apresentar as mecânicas e quatro fases próprias, desenvolvidas para explorar diferentes combinações de puzzles e obstáculos.
+
+---
 
 ## Controles
 
-| Tecla | Ação |
+| Entrada | Ação |
 |---|---|
-| `1` | Invocar ponte |
-| `2` | Invocar corda |
-| `3` | Invocar parede |
-| `Espaço` | Pular |
+| `A` / `D` | Movimentar o personagem horizontalmente. |
+| `W` / `S` | Movimentar-se verticalmente enquanto estiver pendurado em uma corda. |
+| Botão esquerdo do mouse | Posicionar o objeto mágico selecionado. |
+| Botão direito do mouse | Cancelar a seleção da invocação. |
+| `R` | Reiniciar a fase. |
 
-## Tecnologias
+### Invocação
 
-- Godot Engine 4.7
-- GDScript
-- Git
-- GitHub
+Os objetos mágicos são selecionados por meio da interface do jogo:
 
-## Estrutura do projeto
+1. Selecione a ponte, a corda ou a parede na interface.
+2. Observe a pré-visualização do objeto seguindo o cursor.
+3. Posicione o objeto no local desejado, respeitando o alinhamento do cenário.
+4. Clique com o botão esquerdo para realizar a invocação.
 
-O projeto utiliza cenas independentes e scripts próprios para organizar as mecânicas.
+A invocação consome mana de acordo com o objeto escolhido.
 
-| Arquivo | Responsabilidade |
-|---|---|
-| `fase_1.tscn` | Cenário principal da primeira fase |
-| `mago.gd` | Movimentação, salto e invocações do protagonista |
-| `poco.tscn` | Obstáculo de poço comum |
-| `poco_espinhos.tscn` | Obstáculo de poço com espinhos |
-| `ponte.tscn` | Objeto mágico de travessia |
-| `armadilha_esqueletos.tscn` | Ativação da horda |
-| `horda_esqueletos.tscn` | Organização e movimentação dos inimigos |
-| `esqueleto.tscn` | Entidade inimiga |
-| `parede_horda.tscn` | Parede invocada para bloquear a horda |
+---
 
-## Como executar
+## Desenvolvimento
 
-1. Instale a Godot Engine 4.7 ou uma versão compatível.
-2. Clone este repositório ou faça download do zip
-3. Execute o projeto com o F6
+O projeto utiliza uma arquitetura baseada em cenas independentes e scripts reutilizáveis, facilitando a criação de novos obstáculos, objetos e fases.
+
+### Tecnologias utilizadas
+
+- **Godot Engine 4.7:** motor de desenvolvimento do jogo.
+- **GDScript:** linguagem utilizada na programação das mecânicas.
+- **Git:** controle de versão.
+- **GitHub:** colaboração e gerenciamento do código-fonte.
+
+### Organização do projeto
+
+```text
+NecroEvaders/
+│
+├── Enemies/          # Inimigos e comportamentos
+│
+├── Globals/          # Sistemas e recursos globais
+│
+├── LevelObjects/     # Objetivos, botões e KillArea
+│
+├── Levels/
+│   ├── TutorialLevels/
+│   └── Levels1-4/
+│
+├── Menus/            # Menus e telas do jogo
+│
+├── Player/           # Personagem, movimentação e interface
+│
+├── Resources/        # Recursos e tilesets
+│
+├── Spawnables/       # Objetos mágicos e pré-visualizações
+│
+└── project.godot     # Configurações principais
+```
+
+---
+
+## Como executar o projeto
+
+1. Instale a [Godot Engine 4.7](https://godotengine.org/download/).
+2. Clone este repositório:
+
+```bash
+git clone https://github.com/HericoSouza/NecroEvaders.git
+```
+
+3. Abra o Gerenciador de Projetos da Godot.
+4. Clique em **Importar** e selecione o arquivo `project.godot`.
+5. Abra o projeto e pressione `F5` para iniciar o jogo.
+
+---
 
 ## Participação em Game Jam
 
 Este projeto está sendo desenvolvido para a **[Hallow Jam 3: Invocação](https://itch.io/jam/hallowjam3)**, uma game jam organizada pelo Game Lab.
 
-A proposta do NecroEvaders explora o tema da invocação por meio de mecânicas centrais de gameplay, nas quais o jogador precisa conjurar objetos mágicos para superar obstáculos, escapar de criaturas e enfrentar desafios.
+O tema da Jam é explorado por meio da mecânica central do jogo: a capacidade de invocar objetos mágicos e utilizá-los de maneira estratégica para solucionar puzzles e superar obstáculos.
 
-**Período da Jam:** 23/10/2026 a 02/11/2026.
+**Evento:** [Hallow Jam 3 — Invocação](https://itch.io/jam/hallowjam3)
 
-**Tema:** Invocação.
+---
+
+## Estado do projeto
+
+**Status:** Em desenvolvimento.
+
+O projeto possui sistemas de movimentação, invocação de objetos, gerenciamento de mana, interação com mecanismos e progressão entre fases.
+
+As quatro fases próprias estão em desenvolvimento e refinamento, com foco na variedade dos puzzles e na utilização estratégica das habilidades mágicas.
+
+Novas melhorias, ajustes de balanceamento e aprimoramentos visuais fazem parte do processo de desenvolvimento.
+
+---
+
+**NecroEvaders**
