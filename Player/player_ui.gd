@@ -5,6 +5,7 @@ extends Control
 @onready var bridge_label := $ColorRect/HBoxContainer/VBoxContainer/BridgeLabel
 @onready var wall_label := $ColorRect/HBoxContainer/VBoxContainer2/WallLabel
 @onready var rope_label := $ColorRect/HBoxContainer/VBoxContainer3/RopeLabel
+@onready var mana_label := $ManaBar/ManaLabel
 
 func _ready() -> void:
 	if (player):
@@ -22,6 +23,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if (player):
 		mana_bar.value = player.mana
+		mana_label.text = str(player.mana)
 
 
 func _on_bridge_button_pressed() -> void:

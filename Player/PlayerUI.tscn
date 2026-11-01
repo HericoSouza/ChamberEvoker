@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://djf8tq317tylk" path="res://Player/player_ui.gd" id="1_qbo8c"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5y5u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mdpv"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="Theme" id="Theme_d1gas"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_p5y5u")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_3mdpv")
+
 [node name="PlayerUi" type="Control" unique_id=1923991655]
 layout_mode = 3
 anchors_preset = 15
@@ -87,7 +96,20 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 27.0
 grow_horizontal = 2
-value = 100.0
+theme = SubResource("Theme_d1gas")
+value = 50.0
+show_percentage = false
+
+[node name="ManaLabel" type="Label" parent="ManaBar" unique_id=1300972372]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "%d"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/BridgeButton" to="." method="_on_bridge_button_pressed"]
 [connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer2/WallButton" to="." method="_on_wall_button_pressed"]
