@@ -1,0 +1,81 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/verdant_teleport_64x64_sheet.png" id="default"]
+
+[sub_resource type="AtlasTexture" id="default_0"]
+atlas = ExtResource("default")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_1"]
+atlas = ExtResource("default")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_2"]
+atlas = ExtResource("default")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_3"]
+atlas = ExtResource("default")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_4"]
+atlas = ExtResource("default")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_5"]
+atlas = ExtResource("default")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_6"]
+atlas = ExtResource("default")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_7"]
+atlas = ExtResource("default")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_8"]
+atlas = ExtResource("default")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="default_9"]
+atlas = ExtResource("default")
+region = Rect2(576, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("default_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_8")
+}, {
+"duration": 1.0,
+"texture": SubResource("default_9")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]

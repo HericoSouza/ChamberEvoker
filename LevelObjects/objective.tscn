@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://osuml1jke0aw"]
 
 [ext_resource type="Script" uid="uid://4bvhidjardke" path="res://LevelObjects/objective.gd" id="1_h78mk"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p5y5u"]
-size = Vector2(64, 64)
+[ext_resource type="SpriteFrames" path="res://LevelObjects/portal_frames.tres" id="2_portal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1gas"]
 size = Vector2(64, 64)
@@ -14,10 +12,12 @@ collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_h78mk")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=267224907]
-texture = SubResource("PlaceholderTexture2D_p5y5u")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=267224907]
+sprite_frames = ExtResource("2_portal")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1410661471]
 shape = SubResource("RectangleShape2D_d1gas")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_finished"]

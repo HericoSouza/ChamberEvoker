@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://xxd2dit63gn8" path="res://Player/mago.gd" id="1_q3lat"]
 [ext_resource type="PackedScene" uid="uid://b8mjmpx3yo0ti" path="res://Player/PlayerUI.tscn" id="3_tok1r"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sch1g"]
-size = Vector2(30, 40)
+[ext_resource type="SpriteFrames" uid="uid://b7druidframes1" path="res://Player/druid_frames.tres" id="4_druid"]
+[ext_resource type="SpriteFrames" path="res://Player/teleport_frames.tres" id="8_teleport"]
+[ext_resource type="Texture2D" uid="uid://t0i54npi56sq" path="res://Resources/Sprites/Tiles/background_0.png" id="5_bg0"]
+[ext_resource type="Texture2D" uid="uid://c2qyux2q3nk83" path="res://Resources/Sprites/Tiles/background_1.png" id="6_bg1"]
+[ext_resource type="Texture2D" uid="uid://b44vatajxj525" path="res://Resources/Sprites/Tiles/background_2.png" id="7_bg2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n0gnj"]
 radius = 15.0
@@ -16,8 +18,17 @@ collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_q3lat")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=591884960]
-texture = SubResource("PlaceholderTexture2D_sch1g")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=591884960]
+position = Vector2(0, 4)
+sprite_frames = ExtResource("4_druid")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Teleport" type="AnimatedSprite2D" parent="." unique_id=591884961]
+visible = false
+z_index = 2
+position = Vector2(0, -4)
+sprite_frames = ExtResource("8_teleport")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=305724556]
 shape = SubResource("CapsuleShape2D_n0gnj")
@@ -32,3 +43,43 @@ metadata/_edit_use_anchors_ = true
 
 [node name="GhostLayer" type="CanvasLayer" parent="." unique_id=1750395470]
 follow_viewport_enabled = true
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=1750395469]
+layer = -1
+
+[node name="Background0" type="TextureRect" parent="BackgroundLayer" unique_id=1750395471]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_bg0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Background1" type="TextureRect" parent="BackgroundLayer" unique_id=1750395472]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_bg1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Background2" type="TextureRect" parent="BackgroundLayer" unique_id=1750395473]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_bg2")
+expand_mode = 1
+stretch_mode = 6
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_finished"]
+[connection signal="frame_changed" from="Teleport" to="." method="_on_teleport_frame_changed"]
+[connection signal="animation_finished" from="Teleport" to="." method="_on_teleport_finished"]

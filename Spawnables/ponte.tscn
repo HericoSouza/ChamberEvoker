@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://dfs1khfbxsqta"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
-size = Vector2(384, 16)
+[ext_resource type="Texture2D" path="res://Resources/Sprites/Tiles/ponte.png" id="ponte_tex"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d1gas"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7byxd"]
 size = Vector2(384, 16)
 
 [node name="Ponte" type="StaticBody2D" unique_id=1117663302]
@@ -14,4 +13,4 @@ shape = SubResource("RectangleShape2D_7byxd")
 one_way_collision = true
 
 [node name="ColorRect" type="Sprite2D" parent="." unique_id=1543012236]
-texture = SubResource("PlaceholderTexture2D_d1gas")
+texture = ExtResource("ponte_tex")

@@ -9,6 +9,16 @@ var rope_count: int = 0
 var pendurado_na_corda = false
 
 @onready var ui = $CanvasLayer/PlayerUi
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+@onready var teleport: AnimatedSprite2D = $Teleport
+
+var invocando: bool = false
+var morrendo: bool = false
+#fica true até o teleporte de entrada na fase acabar
+var chegando: bool = true
+#quadro do teleporte em que o feixe cobre o jogador
+const TELEPORT_REVEAL_FRAME: int = 3
 
 @export_category("Mana")
 @export var mana: int = 100
@@ -25,6 +35,7 @@ var curr_selected_spawnable: spawnable = spawnable.NONE
 var bridge_scene: PackedScene = Globals.bridge
 var rope_scene: PackedScene = Globals.rope
 var wall_scene: PackedScene = Globals.wall
+var rune_scene: PackedScene = Globals.rune_effect
 
 #eu provavelmente deveria botar pra ele setar os bounds no fantasma
 #baseado nisso também
@@ -42,6 +53,7 @@ var build_ghost: GhostSpawnable = null
 #Só pra isso não ficar dificultando minha vida quando eu tiver editando fase
 func _ready() -> void:
 	ui.visible = true
+	sprite.visible = false
 
 func _physics_process(delta: float) -> void:
 
@@ -50,14 +62,67 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y += GRAVIDADE * delta
 	#me recordo de que era pra ele não poder pular então tirei a parte do pulo
-	handle_controls()
+	if (chegando):
+		start_teleport()
+	else:
+		handle_controls()
 	move_and_slide()
 
 func falhar() -> void:
-
+	if (morrendo):
+		return
+	morrendo = true
 	print("Falha! A fase será reiniciada.")
+	set_physics_process(false)
+	sprite.visible = true
+	teleport.visible = false
+	sprite.play("death")
 
-	get_tree().reload_current_scene()
+func _on_animation_finished() -> void:
+	match sprite.animation:
+		"summon":
+			invocando = false
+		"death":
+			get_tree().reload_current_scene()
+
+#algumas fases começam com o jogador no ar, então espera ele pousar
+func start_teleport() -> void:
+	if (is_on_floor() && !teleport.visible):
+		teleport.visible = true
+		teleport.play("default")
+
+func _on_teleport_frame_changed() -> void:
+	if (teleport.frame >= TELEPORT_REVEAL_FRAME):
+		sprite.visible = true
+
+func _on_teleport_finished() -> void:
+	teleport.visible = false
+	chegando = false
+
+func update_animation(dir: float) -> void:
+	if (invocando):
+		return
+	if dir:
+		sprite.flip_h = dir < 0
+	var movendo: bool = dir != 0 or (pendurado_na_corda and velocity.y != 0)
+	sprite.play("walk" if movendo else "idle")
+
+func spawn_rune(pos: Vector2) -> void:
+	var r: AnimatedSprite2D = rune_scene.instantiate()
+	r.global_position = pos
+	add_sibling(r)
+	match curr_selected_spawnable:
+		spawnable.BRIDGE:
+			r.play("bridge")
+		spawnable.ROPE:
+			r.play("rope")
+		spawnable.WALL:
+			r.play("wall")
+
+func play_summon() -> void:
+	invocando = true
+	sprite.flip_h = get_global_mouse_position().x < global_position.x
+	sprite.play("summon")
 
 func handle_controls() -> void:
 	var dir := Input.get_axis("a","d")
@@ -66,10 +131,11 @@ func handle_controls() -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, VELOCIDADE)
 	if (Input.is_action_just_pressed("r")):
-		falhar()
+		get_tree().reload_current_scene()
 	if (pendurado_na_corda):
 		var upward := Input.get_axis("w","s")
 		velocity.y = upward*VELOCIDADE
+	update_animation(dir)
 func handle_spawns() -> void:
 	var s: Node2D
 	match curr_selected_spawnable:
@@ -91,6 +157,9 @@ func handle_spawns() -> void:
 				s = wall_scene.instantiate()
 				s.global_position = get_global_mouse_position().snapped(wall_snapping)
 	add_sibling(s)
+	if (s):
+		play_summon()
+		spawn_rune(s.global_position)
 	curr_selected_spawnable = spawnable.NONE
 	remove_ghost()
 
@@ -125,6 +194,8 @@ func clear_build() -> void:
 	remove_ghost()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if (morrendo):
+		return
 	if (event is InputEventMouseButton && event.is_pressed()):
 		if (event.button_index == MOUSE_BUTTON_LEFT):
 			handle_spawns()

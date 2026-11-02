@@ -1,3 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# pacote bruto: a licenca nao permite reenviar; so o que o jogo usa fica em Resources/Sprites/Effects
+/Resources/Sprites/Free_Pixel_Portals_and_Runes/
