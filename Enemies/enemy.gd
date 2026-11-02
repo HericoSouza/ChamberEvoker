@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var grav: float = 980
 @export var speed: float = 80
 @onready var fallcheck: RayCast2D = $RayCast2D
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var flip: bool = true
 # Called when the node enters the scene tree for the first time.
 
@@ -52,8 +52,23 @@ func handle_movement(delta:float) -> void:
 		velocity.x = 0
 	if (!is_on_floor()):
 		velocity.y += grav*delta
-	if (move_and_slide()):
+	var colidiu := move_and_slide()
+	update_animation()
+	if (colidiu):
 		var col = get_last_slide_collision()
 		var collider = col.get_collider()
 		if (collider is Player):
 			collider.falhar()
+			attack(collider)
+
+#preso numa parede ele continua tentando andar, então olha a velocidade real
+func update_animation() -> void:
+	if (abs(get_real_velocity().x) < 1):
+		sprite.play("idle")
+	else:
+		sprite.play("walk")
+
+func attack(target: Node2D) -> void:
+	set_physics_process(false)
+	sprite.flip_h = target.global_position.x < global_position.x
+	sprite.play("attack")

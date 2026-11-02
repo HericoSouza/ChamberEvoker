@@ -1,0 +1,275 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/ember_rune_circle_64x64_sheet.png" id="bridge"]
+[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/verdant_rune_circle_64x64_sheet.png" id="rope"]
+[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/arcane_rune_circle_64x64_sheet.png" id="wall"]
+
+[sub_resource type="AtlasTexture" id="bridge_0"]
+atlas = ExtResource("bridge")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_1"]
+atlas = ExtResource("bridge")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_2"]
+atlas = ExtResource("bridge")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_3"]
+atlas = ExtResource("bridge")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_4"]
+atlas = ExtResource("bridge")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_5"]
+atlas = ExtResource("bridge")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_6"]
+atlas = ExtResource("bridge")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_7"]
+atlas = ExtResource("bridge")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_8"]
+atlas = ExtResource("bridge")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_9"]
+atlas = ExtResource("bridge")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_10"]
+atlas = ExtResource("bridge")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="bridge_11"]
+atlas = ExtResource("bridge")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_0"]
+atlas = ExtResource("rope")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_1"]
+atlas = ExtResource("rope")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_2"]
+atlas = ExtResource("rope")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_3"]
+atlas = ExtResource("rope")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_4"]
+atlas = ExtResource("rope")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_5"]
+atlas = ExtResource("rope")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_6"]
+atlas = ExtResource("rope")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_7"]
+atlas = ExtResource("rope")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_8"]
+atlas = ExtResource("rope")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_9"]
+atlas = ExtResource("rope")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_10"]
+atlas = ExtResource("rope")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="rope_11"]
+atlas = ExtResource("rope")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_0"]
+atlas = ExtResource("wall")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_1"]
+atlas = ExtResource("wall")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_2"]
+atlas = ExtResource("wall")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_3"]
+atlas = ExtResource("wall")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_4"]
+atlas = ExtResource("wall")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_5"]
+atlas = ExtResource("wall")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_6"]
+atlas = ExtResource("wall")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_7"]
+atlas = ExtResource("wall")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_8"]
+atlas = ExtResource("wall")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_9"]
+atlas = ExtResource("wall")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_10"]
+atlas = ExtResource("wall")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="wall_11"]
+atlas = ExtResource("wall")
+region = Rect2(704, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("bridge_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_8")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_9")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("bridge_11")
+}],
+"loop": false,
+"name": &"bridge",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("rope_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_8")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_9")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("rope_11")
+}],
+"loop": false,
+"name": &"rope",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("wall_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_8")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_9")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("wall_11")
+}],
+"loop": false,
+"name": &"wall",
+"speed": 18.0
+}]

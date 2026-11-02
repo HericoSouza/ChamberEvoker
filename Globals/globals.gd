@@ -13,6 +13,8 @@ static var ghost_rope: PackedScene = preload("res://Spawnables/Ghosts/ghost_rope
 #static var ghost_cage: PackedScene = preload("res://Spawnables/Ghosts/ghost_rope.tscn")
 static var ghost_wall: PackedScene = preload("res://Spawnables/Ghosts/ghost_wall.tscn")
 
+static var rune_effect: PackedScene = preload("res://Spawnables/rune_effect.tscn")
+
 static var main_menu_path: String = "res://Menus/main_menu.tscn"
 static var win_screen_path: String = "res://Menus/win_screen.tscn"
 static var current_level: int = -1

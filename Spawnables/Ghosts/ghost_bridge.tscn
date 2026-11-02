@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://o47bkp522iaq"]
 
 [ext_resource type="Script" uid="uid://cx7yybij0sbbc" path="res://Spawnables/Ghosts/ghost.gd" id="1_kew0k"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d1gas"]
-size = Vector2(384, 16)
+[ext_resource type="Texture2D" path="res://Resources/Sprites/Tiles/ponte.png" id="ponte_tex"]
 
 [node name="GhostBridge" type="Sprite2D" unique_id=198194527]
 self_modulate = Color(0.4627451, 0, 0, 0.49803922)
-texture = SubResource("PlaceholderTexture2D_d1gas")
+texture = ExtResource("ponte_tex")
 script = ExtResource("1_kew0k")
 snap = Vector2(32, 8)
