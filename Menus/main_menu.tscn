@@ -38,7 +38,7 @@ offset_right = 29.0
 offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 12
 
 [node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1745898391]
 layout_mode = 2
@@ -48,5 +48,35 @@ text = "JOGAR"
 layout_mode = 2
 text = "SAIR"
 
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1948802229]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 163.0
+grow_vertical = 0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1699975472]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=955780182]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="MarginContainer/HBoxContainer" unique_id=1116984818]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/VolumeSlider" to="." method="_on_volume_slider_value_changed"]

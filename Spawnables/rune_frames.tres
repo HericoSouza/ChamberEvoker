@@ -1,8 +1,8 @@
-[gd_resource type="SpriteFrames" format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://cycskbe4mq2xo"]
 
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/ember_rune_circle_64x64_sheet.png" id="bridge"]
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/verdant_rune_circle_64x64_sheet.png" id="rope"]
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/arcane_rune_circle_64x64_sheet.png" id="wall"]
+[ext_resource type="Texture2D" uid="uid://by8wrgxchonx2" path="res://Resources/Sprites/Effects/ember_rune_circle_64x64_sheet.png" id="bridge"]
+[ext_resource type="Texture2D" uid="uid://b10lmeyk80gd" path="res://Resources/Sprites/Effects/verdant_rune_circle_64x64_sheet.png" id="rope"]
+[ext_resource type="Texture2D" uid="uid://q0qgx2u5fj8y" path="res://Resources/Sprites/Effects/arcane_rune_circle_64x64_sheet.png" id="wall"]
 
 [sub_resource type="AtlasTexture" id="bridge_0"]
 atlas = ExtResource("bridge")
@@ -187,7 +187,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("bridge_11")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bridge",
 "speed": 18.0
 }, {
@@ -228,7 +228,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("rope_11")
 }],
-"loop": false,
+"loop": 0,
 "name": &"rope",
 "speed": 18.0
 }, {
@@ -269,7 +269,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("wall_11")
 }],
-"loop": false,
+"loop": 0,
 "name": &"wall",
 "speed": 18.0
 }]

@@ -1,8 +1,8 @@
-[gd_resource type="SpriteFrames" format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bxjmmpn2qg5qh"]
 
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Enemies/Skeleton/Attack.png" id="attack"]
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Enemies/Skeleton/Idle.png" id="idle"]
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Enemies/Skeleton/Walk.png" id="walk"]
+[ext_resource type="Texture2D" uid="uid://dibn0rgip8whq" path="res://Resources/Sprites/Enemies/Skeleton/Attack.png" id="attack"]
+[ext_resource type="Texture2D" uid="uid://csuq6cuyp7jgv" path="res://Resources/Sprites/Enemies/Skeleton/Idle.png" id="idle"]
+[ext_resource type="Texture2D" uid="uid://dkwdqpwbsnvdh" path="res://Resources/Sprites/Enemies/Skeleton/Walk.png" id="walk"]
 
 [sub_resource type="AtlasTexture" id="attack_0"]
 atlas = ExtResource("attack")
@@ -111,7 +111,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("attack_7")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack",
 "speed": 12.0
 }, {
@@ -128,7 +128,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("idle_3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 6.0
 }, {
@@ -145,7 +145,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("walk_3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 8.0
 }]

@@ -135,6 +135,8 @@ func handle_controls() -> void:
 	if (pendurado_na_corda):
 		var upward := Input.get_axis("w","s")
 		velocity.y = upward*VELOCIDADE
+	if (Input.is_action_just_pressed("esc")):
+		get_tree().change_scene_to_file(Globals.main_menu_path)
 	update_animation(dir)
 func handle_spawns() -> void:
 	var s: Node2D

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3ursoagvxemx"]
+
+[ext_resource type="AudioStream" uid="uid://c53g0y7u78uv5" path="res://Resources/Audio/theme-compressed.mp3" id="1_wy0ae"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=2132436585]
+stream = ExtResource("1_wy0ae")
+autoplay = true

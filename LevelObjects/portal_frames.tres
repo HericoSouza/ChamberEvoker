@@ -1,8 +1,8 @@
-[gd_resource type="SpriteFrames" format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bcyedrvv4cx3x"]
 
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/ember_portal_64x64_close_strip.png" id="close"]
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/ember_portal_64x64_idle_strip.png" id="idle"]
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/ember_portal_64x64_open_strip.png" id="open"]
+[ext_resource type="Texture2D" uid="uid://cqtvmqb0lsddk" path="res://Resources/Sprites/Effects/ember_portal_64x64_close_strip.png" id="close"]
+[ext_resource type="Texture2D" uid="uid://dq4jugj6m5c5r" path="res://Resources/Sprites/Effects/ember_portal_64x64_idle_strip.png" id="idle"]
+[ext_resource type="Texture2D" uid="uid://dnx0don87r8r7" path="res://Resources/Sprites/Effects/ember_portal_64x64_open_strip.png" id="open"]
 
 [sub_resource type="AtlasTexture" id="close_0"]
 atlas = ExtResource("close")
@@ -151,7 +151,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("close_7")
 }],
-"loop": false,
+"loop": 0,
 "name": &"close",
 "speed": 12.0
 }, {
@@ -192,7 +192,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("idle_11")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 12.0
 }, {
@@ -227,7 +227,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("open_9")
 }],
-"loop": false,
+"loop": 0,
 "name": &"open",
 "speed": 12.0
 }]

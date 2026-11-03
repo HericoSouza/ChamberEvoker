@@ -1,6 +1,6 @@
-[gd_resource type="SpriteFrames" format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://uyfooapjfbyu"]
 
-[ext_resource type="Texture2D" path="res://Resources/Sprites/Effects/verdant_teleport_64x64_sheet.png" id="default"]
+[ext_resource type="Texture2D" uid="uid://dla7g1hb30evf" path="res://Resources/Sprites/Effects/verdant_teleport_64x64_sheet.png" id="default"]
 
 [sub_resource type="AtlasTexture" id="default_0"]
 atlas = ExtResource("default")
@@ -75,7 +75,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("default_9")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 20.0
 }]

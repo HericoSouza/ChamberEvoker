@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://b8mjmpx3yo0ti"]
 
 [ext_resource type="Script" uid="uid://djf8tq317tylk" path="res://Player/player_ui.gd" id="1_qbo8c"]
+[ext_resource type="Texture2D" uid="uid://diugiimxe0vjc" path="res://Resources/Sprites/UI/bridge_icon.png" id="2_2ncyk"]
+[ext_resource type="Texture2D" uid="uid://dhvwyojcdlkyu" path="res://Resources/Sprites/UI/wall_icon.png" id="3_1i0l3"]
+[ext_resource type="Texture2D" uid="uid://b6mowyoofopgt" path="res://Resources/Sprites/UI/rope_icon.png" id="4_mb3tw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5y5u"]
 
@@ -50,7 +53,8 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
 focus_mode = 0
-text = "PONTE"
+icon = ExtResource("2_2ncyk")
+expand_icon = true
 
 [node name="BridgeLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer" unique_id=476707584]
 layout_mode = 2
@@ -66,8 +70,10 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
 focus_mode = 0
-text = "PAREDE"
+icon = ExtResource("3_1i0l3")
 autowrap_mode = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="WallLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer2" unique_id=2141877913]
 layout_mode = 2
@@ -83,7 +89,9 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
 focus_mode = 0
-text = "CORDA"
+icon = ExtResource("4_mb3tw")
+icon_alignment = 1
+expand_icon = true
 
 [node name="RopeLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer3" unique_id=714695989]
 layout_mode = 2
