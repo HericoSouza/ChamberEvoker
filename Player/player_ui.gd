@@ -7,6 +7,9 @@ extends Control
 @onready var rope_label := $ColorRect/HBoxContainer/VBoxContainer3/RopeLabel
 @onready var mana_label := $ManaBar/ManaLabel
 
+@onready var bridge_button := $ColorRect/HBoxContainer/VBoxContainer/BridgeButton
+@onready var wall_button := $ColorRect/HBoxContainer/VBoxContainer2/WallButton
+@onready var rope_button := $ColorRect/HBoxContainer/VBoxContainer3/RopeButton
 func _ready() -> void:
 	if (player):
 		mana_bar.max_value = player.max_mana
@@ -42,3 +45,8 @@ func _on_rope_button_pressed() -> void:
 	if (player):
 		player.curr_selected_spawnable = Player.spawnable.ROPE
 		player.create_ghost()
+
+func untoggle_buttons() -> void:
+	bridge_button.set_pressed_no_signal(false)
+	wall_button.set_pressed_no_signal(false)
+	rope_button.set_pressed_no_signal(false)

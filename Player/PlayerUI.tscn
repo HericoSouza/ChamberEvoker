@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://b8mjmpx3yo0ti"]
 
 [ext_resource type="Script" uid="uid://djf8tq317tylk" path="res://Player/player_ui.gd" id="1_qbo8c"]
+[ext_resource type="ButtonGroup" uid="uid://c1se46833i7g1" path="res://Player/playerui_button_group.tres" id="2_1i0l3"]
 [ext_resource type="Texture2D" uid="uid://diugiimxe0vjc" path="res://Resources/Sprites/UI/bridge_icon.png" id="2_2ncyk"]
+[ext_resource type="Theme" uid="uid://uyinytr0seqo" path="res://Player/ui_theme.theme" id="2_mb3tw"]
 [ext_resource type="Texture2D" uid="uid://dhvwyojcdlkyu" path="res://Resources/Sprites/UI/wall_icon.png" id="3_1i0l3"]
 [ext_resource type="Texture2D" uid="uid://b6mowyoofopgt" path="res://Resources/Sprites/UI/rope_icon.png" id="4_mb3tw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5y5u"]
+bg_color = Color(0, 0.105882354, 0.13725491, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mdpv"]
-bg_color = Color(0, 0, 1, 1)
+bg_color = Color(0.23137255, 0.41960785, 0.6117647, 1)
 
 [sub_resource type="Theme" id="Theme_d1gas"]
 ProgressBar/styles/background = SubResource("StyleBoxFlat_p5y5u")
@@ -32,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.14483374, 0.33165124, 1, 1)
+color = Color(0.102, 0.19769995, 0.3, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1018422723]
 layout_mode = 1
@@ -53,6 +56,9 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
 focus_mode = 0
+theme = ExtResource("2_mb3tw")
+toggle_mode = true
+button_group = ExtResource("2_1i0l3")
 icon = ExtResource("2_2ncyk")
 expand_icon = true
 
@@ -70,6 +76,9 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
 focus_mode = 0
+theme = ExtResource("2_mb3tw")
+toggle_mode = true
+button_group = ExtResource("2_1i0l3")
 icon = ExtResource("3_1i0l3")
 autowrap_mode = 3
 icon_alignment = 1
@@ -89,6 +98,9 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 4
 focus_mode = 0
+theme = ExtResource("2_mb3tw")
+toggle_mode = true
+button_group = ExtResource("2_1i0l3")
 icon = ExtResource("4_mb3tw")
 icon_alignment = 1
 expand_icon = true

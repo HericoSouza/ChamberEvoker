@@ -163,6 +163,7 @@ func handle_spawns() -> void:
 		play_summon()
 		spawn_rune(s.global_position)
 	curr_selected_spawnable = spawnable.NONE
+	ui.untoggle_buttons()
 	remove_ghost()
 
 func create_ghost() -> void:
