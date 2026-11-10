@@ -1,10 +1,10 @@
-# NecroEvaders
+# ChamberEvoker
 
 <p align="center">
   <strong>Um mago. Uma câmara. Uma sequência de salas.</strong>
 </p>
 
-NecroEvaders é um jogo 2D de puzzles e plataforma desenvolvido com **Godot Engine 4.7**, no qual o jogador controla um mago que precisa explorar uma misteriosa câmara, solucionar desafios e encontrar o caminho para avançar.
+ChamberEvoker é um jogo 2D de puzzles e plataforma desenvolvido com **Godot Engine 4.7**, no qual o jogador controla um mago que precisa explorar uma misteriosa câmara, solucionar desafios e encontrar o caminho para avançar.
 
 Para superar os obstáculos, o jogador utiliza diferentes invocações mágicas, criando objetos que modificam o ambiente e permitem alcançar lugares antes inacessíveis.
 
@@ -90,7 +90,7 @@ O projeto utiliza uma arquitetura baseada em cenas independentes e scripts reuti
 ### Organização do projeto
 
 ```text
-NecroEvaders/
+ChamberEvoker/
 │
 ├── Enemies/          # Inimigos e comportamentos
 │
@@ -152,4 +152,4 @@ Novas melhorias, ajustes de balanceamento e aprimoramentos visuais fazem parte d
 
 ---
 
-**NecroEvaders**
+**ChamberEvoker**
