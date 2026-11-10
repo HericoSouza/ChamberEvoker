@@ -121,7 +121,7 @@ ChamberEvoker/
 2. Clone este repositório:
 
 ```bash
-git clone https://github.com/HericoSouza/NecroEvaders.git
+git clone https://github.com/HericoSouza/ChamberEvoker.git
 ```
 
 3. Abra o Gerenciador de Projetos da Godot.
